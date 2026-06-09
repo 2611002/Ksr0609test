@@ -3,13 +3,13 @@
 import streamlit as st
 
 # [제목과 메뉴판] - print 대신 st.title, st.write 사용
-st.title("🔋시험 기간 카페인 반감기 계산기➕✖️")
+st.title("➕시험 기간 카페인 반감기 계산기✖️")
 
-drinks = ["아메리카노", "몬스터 에너지", "핫식스", "캔커피"]
+drinks = ["아메리카노 ☕️", "몬스터 에너지🔋", "핫식스 6️⃣", "캔커피🥤"]
 caffeine_amounts = [150, 100, 60, 40]
 total_caffeine = 0
 
-st.write("--- 카페인 음료 메뉴판☕️ ---")
+st.write("--- 카페인 음료 메뉴판 ---")
 for i in range(len(drinks)):
     st.write(f"{i+1}. {drinks[i]} ({caffeine_amounts[i]}mg)")
 
