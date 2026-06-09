@@ -1,12 +1,15 @@
+#Streamlit ver.
+
 import streamlit as st
+
 # [제목과 메뉴판] - print 대신 st.title, st.write 사용
-st.title("🔋 시험 기간 카페인 반감기 계산기")
+st.title("🔋시험 기간 카페인 반감기 계산기➕✖️")
 
 drinks = ["아메리카노", "몬스터 에너지", "핫식스", "캔커피"]
 caffeine_amounts = [150, 100, 60, 40]
 total_caffeine = 0
 
-st.write("--- 카페인 음료 메뉴판 ---")
+st.write("--- 카페인 음료 메뉴판☕️ ---")
 for i in range(len(drinks)):
     st.write(f"{i+1}. {drinks[i]} ({caffeine_amounts[i]}mg)")
 
@@ -31,7 +34,7 @@ if user_input:  # 사용자가 무언가 입력했을 때만 작동
 st.write(f"**오늘 총 섭취한 카페인:** {total_caffeine} mg")
 
 # [시간 입력] - input 대신 st.number_input 사용
-sleep_hours = st.number_input("몇 시간 후에 잠에 들 예정이신가요?:", min_value=1, max_value=24, value=5)
+sleep_hours = st.number_input("몇 시간 더 공부한 후에 잠에 들 예정이신가요?:", min_value=1, max_value=24, value=5)
 
 # [반감기 계산 반복문] - 2차시 코드와 100% 동일
 remaining_caffeine = total_caffeine
@@ -44,4 +47,4 @@ st.write(f"{sleep_hours}시간 후 몸에 남은 카페인: **{remaining_caffein
 if remaining_caffeine >= 50:
     st.error("🚨 [경고] 체내 카페인 수치가 높아 밤에 잠을 설칠 수 있습니다!")
 else:
-    st.success("✅ [안전] 카페인이 안전 수치로 떨어졌습니다. 편안하게 주무세요!")
+    st.success("✅ [안전] 카페인이 안전 수치로 떨어집니다. 열공하고 편안하게 주무세요!")
